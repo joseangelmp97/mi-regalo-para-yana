@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regalo para Yana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1 id="title">Felicidades Yana, hoy tu regalo dependerá del azar. Selecciona una opción:</h1>
+    
+    <!-- Botones para opciones -->
+    <div id="options">
+      <button class="option" data-value="1">1</button>
+      <button class="option" data-value="2">2</button>
+      <button class="option" data-value="3">3</button>
+      <button class="option" data-value="4">4</button>
+    </div>
+    
+    <!-- Contenedor para mostrar el resultado y el botón NEXT -->
+    <div id="result" class="hidden">
+      <p id="message"></p>
+      <img id="image" src="" alt="Imagen del regalo">
+      <button id="next">NEXT</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
