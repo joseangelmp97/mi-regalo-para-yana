@@ -14,7 +14,7 @@
 
   <!-- Pantalla intermedia con texto y botón Next -->
   <div id="next-screen" class="hidden">
-    <p>Vamos a jugar un poco, elige sabiamente para descubrir tu regalo...</p>
+    <p>Tener un "casi novio" ingeniero debe ser divertido jeje así que vamos a jugar un poco, elige sabiamente para descubrir tu regalo...</p>
     <button id="next-button">NEXT</button>
   </div>
 
@@ -22,14 +22,15 @@
   <div id="first-options-screen" class="hidden">
     <h2>Primera selección: ¿Cuándo disfrutarás tu regalo?</h2>
     <div class="options">
-      <button class="option" data-value="1">1</button> <!-- Día -->
-      <button class="option" data-value="2">2</button> <!-- Noche -->
+        <button class="option" data-value="1" data-image="images/dia.jpg">1</button>
+        <button class="option" data-value="2" data-image="images/noche.jpg">2</button>
     </div>
   </div>
 
   <!-- Pantalla con resultado de la primera opción y botón Next -->
   <div id="first-result-screen" class="hidden">
     <p id="first-result-message"></p>
+    <img id="first-result-image" src="" alt="Resultado Día/Noche" style="display:none;"> <!-- Añadido para mostrar la imagen -->
     <button id="first-next-button">NEXT</button>
   </div>
 
@@ -37,15 +38,16 @@
   <div id="second-options-screen" class="hidden">
     <h2>Segunda selección: ¿Dónde disfrutarás tu regalo?</h2>
     <div class="options">
-      <button class="option" data-value="1">1</button> <!-- Playa -->
-      <button class="option" data-value="2">2</button> <!-- Montaña -->
-      <button class="option" data-value="3">3</button> <!-- Ciudad -->
+        <button class="option" data-value="1" data-image="images/playa.jpg">1</button>
+        <button class="option" data-value="2" data-image="images/montana.jpg">2</button>
+        <button class="option" data-value="3" data-image="images/ciudad.jpg">3</button>
     </div>
   </div>
 
   <!-- Pantalla con resultado de la segunda opción y botón Next -->
   <div id="second-result-screen" class="hidden">
     <p id="second-result-message"></p>
+    <img id="second-result-image" src="" alt="Resultado Lugar" style="display:none;"> <!-- Añadido para mostrar la imagen -->
     <button id="second-next-button">NEXT</button>
   </div>
 
@@ -53,22 +55,23 @@
   <div id="third-options-screen" class="hidden">
     <h2>Tercera selección: ¿Qué tipo de experiencia será tu regalo?</h2>
     <div class="options">
-      <button class="option" data-value="1">1</button> <!-- Comida -->
-      <button class="option" data-value="2">2</button> <!-- Adrenalina -->
-      <button class="option" data-value="3">3</button> <!-- Masaje -->
-      <button class="option" data-value="4">4</button> <!-- Arte -->
+        <button class="option" data-value="1" data-image="images/comida.jpg">1</button>
+        <button class="option" data-value="2" data-image="images/adrenalina.jpg">2</button>
+        <button class="option" data-value="3" data-image="images/masaje.jpg">3</button>
+        <button class="option" data-value="4" data-image="images/arte.jpg">4</button>
     </div>
   </div>
 
   <!-- Pantalla con resultado de la tercera opción y botón Next -->
   <div id="third-result-screen" class="hidden">
     <p id="third-result-message"></p>
+    <img id="third-result-image" src="" alt="Resultado Experiencia" style="display:none;"> <!-- Añadido para mostrar la imagen -->
     <button id="third-next-button">NEXT</button>
   </div>
 
   <!-- Pantalla final con el resumen -->
   <div id="final-screen" class="hidden">
-    <h2>Felicidades Yana, tu regalo es:</h2>
+    <h2>Felicidades mi amor! Tu regalo es:</h2>
     <p id="final-message"></p>
     <button id="final-next-button">NEXT</button>
   </div>
@@ -76,7 +79,7 @@
   <!-- Última pantalla con el mensaje de cierre -->
   <div id="closing-screen" class="hidden">
     <h2>¡Felicidades guapa!</h2>
-    <p>Disfruta tu día y tu regalo especial.</p>
+    <p>Disfruta tu día y tu regalo especial. Te quiero mucho.</p>
   </div>
 
   <script src="script.js"></script>

@@ -23,6 +23,12 @@ const secondResultMessage = document.getElementById('second-result-message');
 const thirdResultMessage = document.getElementById('third-result-message');
 const finalMessage = document.getElementById('final-message');
 
+// Elementos para mostrar las imágenes
+const firstResultImage = document.getElementById('first-result-image');
+const secondResultImage = document.getElementById('second-result-image');
+const thirdResultImage = document.getElementById('third-result-image');
+
+
 // Variables para guardar las selecciones
 let firstSelection = '';
 let secondSelection = '';
@@ -45,6 +51,9 @@ document.querySelectorAll('#first-options-screen .option').forEach(button => {
   button.addEventListener('click', (e) => {
     firstSelection = e.target.getAttribute('data-value') === '1' ? 'Día' : 'Noche';
     firstResultMessage.textContent = `Has elegido disfrutar tu regalo por la ${firstSelection}.`;
+    firstResultImage.src = e.target.getAttribute('data-image'); // Muestra la imagen correspondiente
+    firstResultImage.style.display = 'block'; // Muestra la imagen
+    
     firstOptionsScreen.classList.add('hidden');
     firstResultScreen.classList.remove('hidden');
   });
@@ -71,6 +80,9 @@ document.querySelectorAll('#second-options-screen .option').forEach(button => {
         break;
     }
     secondResultMessage.textContent = `Has elegido disfrutar tu regalo en la ${secondSelection}.`;
+    secondResultImage.src = e.target.getAttribute('data-image'); // Muestra la imagen correspondiente
+    secondResultImage.style.display = 'block'; // Muestra la imagen
+    
     secondOptionsScreen.classList.add('hidden');
     secondResultScreen.classList.remove('hidden');
   });
@@ -100,6 +112,9 @@ document.querySelectorAll('#third-options-screen .option').forEach(button => {
         break;
     }
     thirdResultMessage.textContent = `Has elegido disfrutar una experiencia de ${thirdSelection}.`;
+    thirdResultImage.src = e.target.getAttribute('data-image'); // Muestra la imagen correspondiente
+    thirdResultImage.style.display = 'block'; // Muestra la imagen
+    
     thirdOptionsScreen.classList.add('hidden');
     thirdResultScreen.classList.remove('hidden');
   });
