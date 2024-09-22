@@ -7,23 +7,76 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <h1 id="title">Felicidades Yana, hoy tu regalo dependerá del azar. Selecciona una opción:</h1>
-    
-    <!-- Botones para opciones -->
-    <div id="options">
-      <button class="option" data-value="1">1</button>
-      <button class="option" data-value="2">2</button>
-      <button class="option" data-value="3">3</button>
-      <button class="option" data-value="4">4</button>
+  <!-- Pantalla de inicio -->
+  <div id="intro-screen" class="screen">
+    <img id="intro-image" src="images/imagen-principal.jpeg" alt="Pantalla de inicio">
+  </div>
+
+  <!-- Pantalla intermedia con texto y botón Next -->
+  <div id="next-screen" class="hidden">
+    <p>Vamos a jugar un poco, elige sabiamente para descubrir tu regalo...</p>
+    <button id="next-button">NEXT</button>
+  </div>
+
+  <!-- Primera pantalla de opciones (2 opciones) -->
+  <div id="first-options-screen" class="hidden">
+    <h2>Primera selección: ¿Cuándo disfrutarás tu regalo?</h2>
+    <div class="options">
+      <button class="option" data-value="1">1</button> <!-- Día -->
+      <button class="option" data-value="2">2</button> <!-- Noche -->
     </div>
-    
-    <!-- Contenedor para mostrar el resultado y el botón NEXT -->
-    <div id="result" class="hidden">
-      <p id="message"></p>
-      <img id="image" src="" alt="Imagen del regalo">
-      <button id="next">NEXT</button>
+  </div>
+
+  <!-- Pantalla con resultado de la primera opción y botón Next -->
+  <div id="first-result-screen" class="hidden">
+    <p id="first-result-message"></p>
+    <button id="first-next-button">NEXT</button>
+  </div>
+
+  <!-- Segunda pantalla de opciones (3 opciones) -->
+  <div id="second-options-screen" class="hidden">
+    <h2>Segunda selección: ¿Dónde disfrutarás tu regalo?</h2>
+    <div class="options">
+      <button class="option" data-value="1">1</button> <!-- Playa -->
+      <button class="option" data-value="2">2</button> <!-- Montaña -->
+      <button class="option" data-value="3">3</button> <!-- Ciudad -->
     </div>
+  </div>
+
+  <!-- Pantalla con resultado de la segunda opción y botón Next -->
+  <div id="second-result-screen" class="hidden">
+    <p id="second-result-message"></p>
+    <button id="second-next-button">NEXT</button>
+  </div>
+
+  <!-- Tercera pantalla de opciones (4 opciones) -->
+  <div id="third-options-screen" class="hidden">
+    <h2>Tercera selección: ¿Qué tipo de experiencia será tu regalo?</h2>
+    <div class="options">
+      <button class="option" data-value="1">1</button> <!-- Comida -->
+      <button class="option" data-value="2">2</button> <!-- Adrenalina -->
+      <button class="option" data-value="3">3</button> <!-- Masaje -->
+      <button class="option" data-value="4">4</button> <!-- Arte -->
+    </div>
+  </div>
+
+  <!-- Pantalla con resultado de la tercera opción y botón Next -->
+  <div id="third-result-screen" class="hidden">
+    <p id="third-result-message"></p>
+    <button id="third-next-button">NEXT</button>
+  </div>
+
+  <!-- Pantalla final con el resumen -->
+  <div id="final-screen" class="hidden">
+    <h2>Felicidades Yana, tu regalo es:</h2>
+    <p id="final-message"></p>
+    <button id="final-next-button">NEXT</button>
+  </div>
+
+  <!-- Última pantalla con el mensaje de cierre -->
+  <div id="closing-screen" class="hidden">
+    <h2>¡Felicidades guapa!</h2>
+    <p>Disfruta tu día y tu regalo especial.</p>
   </div>
 
   <script src="script.js"></script>
